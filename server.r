@@ -67,8 +67,12 @@ function(input, output, session) {
             class="progress",
             span(paste0(percentage,  '%'), 
                  style = 'font-size: xx-small; position: absolute; padding-top: 1px; color: white;'),
-            div(class="progress-bar progress-bar-info", style=paste0("width: ", percentage, "%"),
-                role = 'progressbar')
+            div(class = 'barexpander', style = 'width: 0.1%;
+                                                height: 100%;
+                                                -webkit-animation: progressexpand 1s ease-in-out 1s forwards;
+                                                animation: progressexpand 1s ease-in-out 1s forwards;',
+              div(class="progress-bar progress-bar-info", style=paste0("width: ", percentage, "%"),
+                role = 'progressbar'))
           )
         )
       })

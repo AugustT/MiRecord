@@ -23,6 +23,26 @@
     padding-top: 2px;
 }
 
+/* The animation code */
+@keyframes progressexpand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes progressexpand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 /*!
  * bootswatch v3.3.7
