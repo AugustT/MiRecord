@@ -16,7 +16,6 @@ body <- dashboardBody(
   
   tabItems(
     tabItem(tabName = "species",
-            h2("Species tab content", style = 'color: #000000'),
             htmlOutput('userstats'),
             htmlOutput('hline'),
             htmlOutput('medals')

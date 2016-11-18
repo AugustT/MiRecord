@@ -66,15 +66,21 @@
 }
 
 @keyframes expandingprofile {
-    0%   {width: 3px; height: 3px; top: 50%;}
-    50%  {width: 760px; height: 3px; top: 50%;}
-    100% {width: 760px; height: 100px; top: 0;}
+    0%   {width: 3px; height: 3px; top: 50%;
+    background-color: rgba(255,255,255,0.8)}
+    50%  {width: 760px; height: 3px; top: 50%;
+    background-color: rgba(255,255,255,0.5)}
+    100% {width: 760px; height: 100px; top: 0;
+    background-color: rgba(255,255,255,0.1)}
 }
 
 @-webkit-keyframes expandingprofile {
-    0%   {width: 3px; height: 3px; margin: 25% auto;}
-    50%  {width: 760px; height: 3px; margin: 25% auto;}
-    100% {width: 760px; height: 100px; margin: 0 auto;}
+    0%   {width: 3px; height: 3px; top: 50%;
+    background-color: rgba(255,255,255,0.8)}
+    50%  {width: 760px; height: 3px; top: 50%;
+    background-color: rgba(255,255,255,0.5)}
+    100% {width: 760px; height: 100px; top: 0;
+    background-color: rgba(255,255,255,0.1)}
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
