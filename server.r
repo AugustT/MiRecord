@@ -77,8 +77,7 @@ function(input, output, session) {
           span(gsub('.png', '', basename(medal)), style = 'color: white'),
           div(
             class="progress",
-            span(paste0(percentage,  '%'), 
-                 style = 'font-size: xx-small; position: absolute; padding-top: 1px; color: white;'),
+            # div(paste0(percentage,  '%'), class = 'barpercentage'),
             div(class = 'barexpander', style = 'width: 0.1%;
                                                 height: 100%;
                                                 -webkit-animation: progressexpand 1s ease-in-out 0.5s forwards;

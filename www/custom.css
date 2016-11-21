@@ -7,6 +7,10 @@
   background-color: #101517;
 }
 
+.progress {
+  position:relative;
+}
+
 .profile-number {
   font-size: xx-large;
 }
@@ -35,10 +39,10 @@
 }
 
 .barpercentage {
-    font-size: xx-small;
-    position: absolute;
-    position: fixed;
-    padding-top: 2px;
+   font-size: xx-small;
+   position: absolute;
+   padding-top: 1px;
+   color: white;
 }
 
 .expandingprofile {
