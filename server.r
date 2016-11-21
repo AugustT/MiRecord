@@ -35,15 +35,7 @@ function(input, output, session) {
     div(style = 'width:760px;
                  height:100px;
                  margin: 0 auto 24px auto;',
-        div(style = 'background-color: rgba(255,255,255,0.1);
-                     width: 760px;
-                     height: 100px;
-                     position: relative;
-                     margin: 0 auto;
-                     width: 0.1%;
-                     height: 0.1%;
-                     -webkit-animation: expandingprofile 2s ease-in-out 0.5s forwards;
-                     animation: expandingprofile 2s ease-in-out 0.5s forwards;',
+        div(class = 'expandingprofile',
             div(class =  'profile-number-container',
                 div(class =  'profile-number', '125'),
                 div('Species Recorded')),
