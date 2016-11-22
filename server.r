@@ -35,15 +35,7 @@ function(input, output, session) {
     div(style = 'width:760px;
                  height:100px;
                  margin: 0 auto 24px auto;',
-        div(style = 'background-color: rgba(255,255,255,0.1);
-                     width: 760px;
-                     height: 100px;
-                     position: relative;
-                     margin: 0 auto;
-                     width: 0.1%;
-                     height: 0.1%;
-                     -webkit-animation: expandingprofile 2s ease-in-out 0.5s forwards;
-                     animation: expandingprofile 2s ease-in-out 0.5s forwards;',
+        div(class = 'expandingprofile',
             div(class =  'profile-number-container',
                 div(class =  'profile-number', '125'),
                 div('Species Recorded')),
@@ -85,8 +77,7 @@ function(input, output, session) {
           span(gsub('.png', '', basename(medal)), style = 'color: white'),
           div(
             class="progress",
-            span(paste0(percentage,  '%'), 
-                 style = 'font-size: xx-small; position: absolute; padding-top: 1px; color: white;'),
+            # div(paste0(percentage,  '%'), class = 'barpercentage'),
             div(class = 'barexpander', style = 'width: 0.1%;
                                                 height: 100%;
                                                 -webkit-animation: progressexpand 1s ease-in-out 0.5s forwards;
