@@ -37,7 +37,11 @@
     margin: 10px 10px 10px 10px;
     background-color: rgba(255,255,255,0.1);
     padding: 10px;
+    opacity: 0;
     box-shadow: 5px 5px 5px rgba(13, 12, 14, 0.45);
+    -moz-animation: medalcontainer 1s ease-in-out 0.5s forwards;
+    -webkit-animation: medalcontainer 1s ease-in-out 0.5s forwards;
+    animation: medalcontainer 1s ease-in-out 0.5s forwards;
 }
 
 .barpercentage {
@@ -54,9 +58,27 @@
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    -webkit-animation: expandingprofile 2s ease-in-out 0.5s forwards;
-    animation: expandingprofile 2s ease-in-out 0.5s forwards;'
+    -moz-animation: expandingprofile 1s ease-in-out 1.5s forwards;
+    -webkit-animation: expandingprofile 1s ease-in-out 1.5s forwards;
+    animation: expandingprofile 1s ease-in-out 1.5s forwards;
 }
+
+/* The animation code */
+@keyframes medalcontainer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes medalcontainer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes medalcontainer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+} 
 
 /* The animation code */
 @keyframes progressexpand {
@@ -70,6 +92,11 @@
     to {width: 100%;}
 }
 
+@-moz-keyframes progressexpand {
+    from {width: 0;}
+    to {width: 100%;}
+} 
+
 /* The animation code */
 @keyframes profile-number-container {
     0%   {opacity: 0;}
@@ -78,7 +105,7 @@
     100% {opacity: 1;}
 }
 
-@-moz-keyframes target-fade {
+@-moz-keyframes profile-number-container {
     0%   {opacity: 0;}
     50%  {opacity: 0;}
     51%  {opacity: 0;}
@@ -111,7 +138,7 @@
     background-color: rgba(255,255,255,0.1)}
 }
 
-@-moz-keyframes target-fade {
+@-moz-keyframes expandingprofile {
     0%   {width: 50px; height: 3px; top: 50%;
     background-color: rgba(255,255,255,0.8)}
     50%  {width: 760px; height: 3px; top: 50%;
