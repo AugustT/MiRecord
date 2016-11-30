@@ -71,20 +71,14 @@ function(input, output, session) {
       percentage <- round(runif(1, 1, 100))
       
       div(class = 'medalcontainer',
+          div(style = paste('position: absolute; bottom: 0; height:',
+                            paste0(runif(1,0,100), '%;')),
+              div(class = 'medalprogressdiv')),
           img(class = 'speciesmedal',
-              src = file.path('species_icons', medal)),
+              src = file.path('species_icons', medal),
+              style = 'margin: 10px; position: relative;'),
           br(),
-          span(gsub('.png', '', basename(medal)), style = 'color: white'),
-          div(
-            class="progress",
-            # div(paste0(percentage,  '%'), class = 'barpercentage'),
-            div(class = 'barexpander', style = 'width: 0.1%;
-                                                height: 100%;
-                                                -webkit-animation: progressexpand 1s ease-in-out 0.5s forwards;
-                                                animation: progressexpand 1s ease-in-out 0.5s forwards;',
-              div(class="progress-bar progress-bar-info", style=paste0("width: ", percentage, "%"),
-                role = 'progressbar'))
-          )
+          div(gsub('.png', '', basename(medal)), style = 'color: white; position: relative; margin-bottom: 10px;')
         )
       })
       

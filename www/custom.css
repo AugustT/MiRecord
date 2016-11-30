@@ -8,12 +8,19 @@
   background-color: #101517;
 }
 
-.progress {
-  position:relative;
-}
-
 .profile-number {
   font-size: xx-large;
+}
+
+.medalprogressdiv {
+    width: 200px;
+    height: 0.01%;
+    background-color: rgba(193, 193, 193, 0.14);
+    position: absolute;
+    bottom: 0;
+    -moz-animation: medalprogressdiv 1s ease-in-out 2s forwards;
+    -webkit-animation: medalprogressdiv 1s ease-in-out 2s forwards;
+    animation: medalprogressdiv 1s ease-in-out 2s forwards;
 }
 
 .profile-number-container {
@@ -31,24 +38,17 @@
 }
 
 .medalcontainer {
+    position: relative;
     float: left;
     text-align: center;
     width: 200px;
     margin: 10px 10px 10px 10px;
-    background-color: rgba(255,255,255,0.1);
-    padding: 10px;
+    background-color: rgba(8, 6, 6, 0.22);
     opacity: 0;
     box-shadow: 5px 5px 5px rgba(13, 12, 14, 0.45);
     -moz-animation: medalcontainer 1s ease-in-out 0.5s forwards;
     -webkit-animation: medalcontainer 1s ease-in-out 0.5s forwards;
     animation: medalcontainer 1s ease-in-out 0.5s forwards;
-}
-
-.barpercentage {
-   font-size: xx-small;
-   position: absolute;
-   padding-top: 1px;
-   color: white;
 }
 
 .expandingprofile {
@@ -79,6 +79,27 @@
     from {opacity: 0;}
     to {opacity: 1;}
 } 
+
+
+
+/* The animation code */
+@keyframes medalprogressdiv {
+    from {height: 0.01%;}
+    to {height: 100%;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes medalprogressdiv {
+    from {height: 0.01%;}
+    to {height: 100%;}
+}
+
+@-moz-keyframes medalprogressdiv {
+    from {height: 0.01%;}
+    to {height: 100%;}
+} 
+
+
 
 /* The animation code */
 @keyframes progressexpand {
