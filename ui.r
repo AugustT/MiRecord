@@ -4,7 +4,7 @@ library(shinydashboard)
 sidebar <- dashboardSidebar(
   sidebarMenu(
     menuItem("Species Awards", tabName = "species", icon = icon("leaf")),
-    menuItem("Locations", icon = icon("map-marker"), tabName = "locations"),
+    menuItem("Records", icon = icon("map-marker"), tabName = "records"),
     menuItem("Leagues", icon = icon("rocket"), tabName = "leagues")
   )
 )
@@ -21,8 +21,10 @@ body <- dashboardBody(
             htmlOutput('medals')
     ),
     
-    tabItem(tabName = "locations",
-            h2("Locations tab content", style = 'color: #000000')
+    tabItem(tabName = "records",
+            h2("Records tab content", style = 'color: #000000'),
+            div(class = 'timeseries_holder',
+                dygraphOutput('timeseries'))
     ),
     
     tabItem(tabName = "leagues",

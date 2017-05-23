@@ -1,3 +1,5 @@
+library(dygraphs)
+
 function(input, output, session) {
   
   output$notificationsMenu <- renderMenu({
@@ -137,5 +139,11 @@ function(input, output, session) {
       )
     )
 
+  })
+  
+  output$timeseries <- renderDygraph({
+    
+    dyRangeSelector(dygraph(mdeaths, main = 'Number of records over time'))
+    
   })
 }
